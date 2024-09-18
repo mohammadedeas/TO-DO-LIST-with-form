@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dash-board</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+</head>
+
+<body>
+    <div class="sideBar">
+        <ul class="logo">
+            <ul class="menu">
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-gauge-high"></i>
+                        <span>Application</span>
+                    </a>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-table-cells-large"></i>
+                        <span>settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-puzzle-piece"></i>
+                        <span>Email</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>calender</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-message"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-calendar-day"></i>
+                        <span>stocks</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                        <span>s</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-bars"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+
+
+
+            </ul>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="header-wraper">
+            <div class="content">
+                <h2 class="header-tittle">QUANTUM</h2>
+                <a href="#">Dashboard</a>
+                <a href="#">Statsics</a>
+                <a href="#">Pages</a>
+                <a href="#">
+                    <i class="fas fa-ellipsis-h"></i>
+                </a>
+            </div>
+            <div class="user-info">
+                <div class="search-box">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" placeholder="search" />
+                </div>
+
+
+                <a href="#" class="bell">
+                    <i class="fa-solid fa-bell"></i>
+                </a>
+                <img src="man looking to the side.jpg" alt="">
+            </div>
+        </div>
+        <h1 class="title">To Do List</h1>
+
+        <form id="taskForm" onsubmit=" return addTask(event)">
+            <input type=" text" id="personName" placeholder="Your name" required>
+            <input type="text" id="taskName" placeholder="Task name" required>
+            <select id="status">
+                <option value="TO_DO">To DO</option>
+                <option value="IN_WORK">In work</option>
+                <option value="DONE">Done</option>
+
+            </select>
+            <input type="file" id="personImage" accept="image/*">
+            <button type="submit">Add Task</button>
+        </form>
+        <div class="cont">
+            <div class="container">
+                <h2>To_Do</h2>
+                <div id="To_Do" class="task-list">
+
+
+                </div>
+
+
+            </div>
+            <div class="container">
+                <h2>in-Work</h2>
+                <div id="inWork" class="task-list"></div>
+
+            </div>
+
+
+            <div class="container">
+                <h2>Done</h2>
+                <div id="Done" class="task-list"></div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
