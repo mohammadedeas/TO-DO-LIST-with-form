@@ -94,44 +94,62 @@
         </div>
         <h1 class="title">To Do List</h1>
 
-        <form id="taskForm" onsubmit=" return addTask(event)">
+        <!-- <form id="taskForm" onsubmit=" return addTask(event)">
             <input type=" text" id="personName" placeholder="Your name" required>
             <input type="text" id="taskName" placeholder="Task name" required>
+            <input type="file" id="personImage" accept="image/*">
             <select id="status">
                 <option value="TO_DO">To DO</option>
                 <option value="IN_WORK">In work</option>
                 <option value="DONE">Done</option>
-
             </select>
-            <input type="file" id="personImage" accept="image/*">
             <button type="submit">Add Task</button>
-        </form>
-        <div class="cont">
-            <div class="container">
-                <h2>To_Do</h2>
-                <div id="To_Do" class="task-list">
+        </form> -->
 
+        <div class="cont">
+            <div class="list-container">
+                <div class="list-header">
+                    <h2>To Do</h2>
+                    <button onclick="openTaskModal('TO_DO')">Add task</button>
 
                 </div>
-
-
+                <div id="To_Do" class="task-list"></div>
             </div>
-            <div class="container">
-                <h2>in-Work</h2>
+            <div class="list-container">
+                <div class="list-header">
+                    <h2>In Work</h2>
+                    <button onclick="openTaskModal('IN_WORK')">Add task</button>
+
+                </div>
                 <div id="inWork" class="task-list"></div>
-
             </div>
+            <div class="list-container">
+                <div class="list-header">
+                    <h2>Done</h2>
+                    <button onclick="openTaskModal('DONE')">Add task</button>
 
-
-            <div class="container">
-                <h2>Done</h2>
+                </div>
                 <div id="Done" class="task-list"></div>
             </div>
+
+
         </div>
 
-    </div>
-    </div>
-    <script src="main.js"></script>
+        <div id="taskModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeTaskModal()">&times;</span>
+                <h2>Add Task</h2>
+                <form id="taskFormModal" onsubmit="submitTask(event)">
+                    <input type="text" id="personNameModal" placeholder="Your name" required>
+                    <input type="text" id="taskNameModal" placeholder="Task name" required>
+                    <input type="file" id="personImageModal" accept="image/*" required>
+                    <button type="submit">Submit Task</button>
+                </form>
+
+            </div>
+        </div>
+        <i class="fa-regular fa-clock"></i>
+        <script src="main.js"></script>
 </body>
 
 </html>
